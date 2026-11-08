@@ -1,0 +1,35 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { GITHUB_URL, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About · ${SITE_TITLE}`} description="About Presley Dobson." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<p class="eyebrow">About</p>
+			<h1>Presley Dobson</h1>
+			<p>
+				I'm Presley, the developer at Easy Read Online, where I build internal tools that help our
+				team produce accessible information. I'm also studying a Digital and Technology Solutions
+				(Software Engineer) degree apprenticeship at Manchester Metropolitan University.
+			</p>
+			<p>
+				I enjoy both sides of web development: designing interfaces people find easy to use, and
+				building the APIs, data and infrastructure behind them. Outside work I run a homelab, which
+				is where this site, my side projects and a fair amount of trial and error live.
+			</p>
+			<div class="section-label">Elsewhere</div>
+			<ul>
+				<li><a href={GITHUB_URL}>GitHub</a></li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

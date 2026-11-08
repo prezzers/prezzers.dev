@@ -1,0 +1,55 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Projects · ${SITE_TITLE}`} description="Things Presley has built." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Projects</h1>
+			<p class="muted">Things I've built and still use every day.</p>
+
+			<section id="coredump" class="card">
+				<h3>CoreDump</h3>
+				<p>
+					An all-in-one place to dump ideas and notes, turn them into tasks linked to my calendar,
+					get suggested reading, and keep my university notes. It pulls in Microsoft Teams messages
+					on a schedule and uses AI to help organise everything. Self-hosted on my homelab.
+				</p>
+				<ul class="tags"><li>Next.js</li><li>Postgres (Neon)</li><li>AI</li><li>Coolify</li></ul>
+			</section>
+
+			<section id="homelab" class="card">
+				<h3>Homelab</h3>
+				<p>
+					A home server built on an old gaming laptop. It blocks ads for all my devices, deploys my
+					apps from GitHub on every push, monitors itself and backs itself up nightly, without
+					opening a single port on my router.
+				</p>
+				<ul class="tags">
+					<li>Proxmox</li><li>Docker</li><li>Coolify</li><li>Cloudflare Tunnel</li><li>Tailscale</li>
+				</ul>
+				<p class="repo"><a href="https://github.com/prezzers/homelab">View the repo on GitHub ↗</a></p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	section.card {
+		margin-top: 1.5rem;
+		scroll-margin-top: 2rem;
+	}
+	.repo {
+		margin-top: 1rem !important;
+		font-size: 0.9rem;
+	}
+</style>
